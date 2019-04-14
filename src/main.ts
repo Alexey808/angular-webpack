@@ -4,4 +4,3 @@ import {AppModule} from './app/app.module';
 const platform = platformBrowserDynamic();
 platform.bootstrapModule(AppModule);
 
-console.log("test");
