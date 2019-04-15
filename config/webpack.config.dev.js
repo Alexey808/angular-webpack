@@ -4,6 +4,7 @@ const webpackMerge = require('webpack-merge');
 
 const commonConfig = require('./webpack.config.common');
 const helpers      = require('./helpers');
+require("dotenv").config();
 
 module.exports = webpackMerge(commonConfig, {
     mode: 'development',
@@ -42,6 +43,7 @@ module.exports = webpackMerge(commonConfig, {
 
     devServer: {
         historyApiFallback: true,
-        stats: 'minimal'
+        stats: 'minimal',
+        port: process.env.PORT || 8080,
     }
 });

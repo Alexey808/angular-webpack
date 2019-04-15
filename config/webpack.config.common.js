@@ -2,7 +2,6 @@
 
 const CleanWebpackPlugin   = require('clean-webpack-plugin');
 const HtmlWebpackPlugin    = require('html-webpack-plugin');
-
 const helpers              = require('./helpers');
 const isDev                = process.env.NODE_ENV !== 'production';
 
@@ -23,15 +22,6 @@ module.exports = {
                 test: /\.html$/,
                 loader: 'html-loader'
             },
-            // {
-            //     test: /\.(scss|sass)$/,
-            //     use: [
-            //         { loader: 'style-loader', options: { sourceMap: isDev } },
-            //         { loader: 'css-loader', options: { sourceMap: isDev } },
-            //         { loader: 'sass-loader', options: { sourceMap: isDev } }
-            //     ],
-            //     include: helpers.root('src')
-            // },
             {
                 test: /\.(scss|sass)$/,
                 use: [
@@ -51,6 +41,6 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: 'src/index.html'
-        })
+        }),
     ]
 };
