@@ -1,0 +1,37 @@
+{
+    "extends": [
+        "tslint:recommended",
+        "angular-tslint-rules"
+    ],
+    "jsRules": {},
+    "rules": {
+        "component-selector": [
+            true, "element", "app", "kebab-case"
+        ],
+        "directive-selector": [
+            true, "attribute", "app", "camelCase"
+        ],
+        "max-line-length": {
+            "options": [120]
+        },
+        "no-console": [
+            true, "log"
+        ],
+        "object-literal-sort-keys": {
+            "options": "match-declaration-order"
+        },
+        "prefer-readonly": [
+            true, "only-inline-lambdas"
+        ]
+    },
+    "rulesDirectory": [
+        "node_modules/codelyzer"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "./src/vendor.ts",
+            "./src/polyfills.ts",
+            "./node_modules"
+        ]
+    }
+}
