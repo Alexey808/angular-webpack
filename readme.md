@@ -8,6 +8,3 @@
 
 ---
 
-почистить пакеты
-dotenv-webpack
-raw-loader
