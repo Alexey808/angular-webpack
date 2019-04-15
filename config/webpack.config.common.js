@@ -11,13 +11,29 @@ module.exports = {
         polyfills: './src/polyfills.ts',
         main: isDev ? './src/main.ts' : './src/main.aot.ts'
     },
-
     resolve: {
         extensions: ['.ts', '.js', '.scss']
     },
-
     module: {
         rules: [
+            {
+                test: /\.ts$/,
+                enforce: 'pre',
+                use: [
+                    {
+                        loader: 'tslint-loader',
+                        options: {
+                            failOnHint: true,
+                            emitErrors: false,
+                            formatter: 'stylish'
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.js$/,
+                exclude: [/node_modules/]
+            },
             {
                 test: /\.html$/,
                 loader: 'html-loader'
@@ -33,12 +49,8 @@ module.exports = {
             }
         ]
     },
-
     plugins: [
-        // new CleanWebpackPlugin(
-        //     helpers.root('dist'), { root: helpers.root(), verbose: true }),
         new CleanWebpackPlugin(),
-
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
