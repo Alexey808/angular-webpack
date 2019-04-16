@@ -16,20 +16,20 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.ts$/,
-                enforce: 'pre',
-                use: [
-                    {
-                        loader: 'tslint-loader',
-                        options: {
-                            failOnHint: true,
-                            emitErrors: false,
-                            formatter: 'stylish'
-                        }
-                    }
-                ]
-            },
+            // {
+            //     test: /\.ts$/,
+            //     enforce: 'pre',
+            //     use: [
+            //         {
+            //             loader: 'tslint-loader',
+            //             options: {
+            //                 failOnHint: true,
+            //                 emitErrors: false,
+            //                 formatter: 'stylish'
+            //             }
+            //         }
+            //     ]
+            // },
             {
                 test: /\.js$/,
                 exclude: [/node_modules/]
@@ -37,6 +37,10 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: 'html-loader'
+            },
+            {
+                test: /\.css$/,
+                loader: ["style-loader", "css-loader"]
             },
             {
                 test: /\.(scss|sass)$/,
