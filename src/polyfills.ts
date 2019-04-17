@@ -1,7 +1,6 @@
 import 'core-js'; //es and reflect
 // zone используется angular
 import 'zone.js/dist/zone';
-require('zone.js/dist/zone');
 
 if (process.env.ENV === 'production') {
     // Production
