@@ -1,9 +1,9 @@
 'use strict';
 
-const CleanWebpackPlugin   = require('clean-webpack-plugin');
-const HtmlWebpackPlugin    = require('html-webpack-plugin');
-const helpers              = require('./helpers');
-const isDev                = process.env.NODE_ENV !== 'production';
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const helpers = require('./helpers');
+const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
     entry: {
@@ -16,20 +16,20 @@ module.exports = {
     },
     module: {
         rules: [
-            // {
-            //     test: /\.ts$/,
-            //     enforce: 'pre',
-            //     use: [
-            //         {
-            //             loader: 'tslint-loader',
-            //             options: {
-            //                 failOnHint: true,
-            //                 emitErrors: false,
-            //                 formatter: 'stylish'
-            //             }
-            //         }
-            //     ]
-            // },
+            {
+                test: /\.ts$/,
+                enforce: 'pre',
+                use: [
+                    {
+                        loader: 'tslint-loader',
+                        options: {
+                            failOnHint: true,
+                            emitErrors: false,
+                            formatter: 'stylish'
+                        }
+                    }
+                ]
+            },
             {
                 test: /\.js$/,
                 exclude: [/node_modules/]

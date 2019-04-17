@@ -1,27 +1,23 @@
-import {NgModule} from "@angular/core";
+import { NgModule } from '@angular/core';
 
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
-@NgModule({
-  imports: [ BrowserModule, FormsModule ]
-})
-export class MaterialMainModule { }
-
-
+// @NgModule({
+//   imports: [ BrowserModule, FormsModule ]
+// })
+// export class MaterialMainModule { }
 
 /**
  * Подключение анимации. Для отключчения нужно импортировать NoopAnimationsModule
  * animation
  */
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-@NgModule({
-    imports: [ BrowserAnimationsModule ]
-})
-export class MaterialAnimationModule { }
-
-
+// @NgModule({
+//     imports: [ BrowserAnimationsModule ]
+// })
+// export class MaterialAnimationModule { }
 
 /**
  * Подключение модулей компонентов
@@ -61,13 +57,16 @@ import {
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule,
+    MatTreeModule
 } from '@angular/material';
 
 @NgModule({
     imports: [
         // CdkTableModule,
         // CdkTreeModule,
+        BrowserModule,
+        FormsModule,
+        BrowserAnimationsModule,
         MatAutocompleteModule,
         MatBadgeModule,
         MatBottomSheetModule,
@@ -102,7 +101,7 @@ import {
         MatTabsModule,
         MatToolbarModule,
         MatTooltipModule,
-        MatTreeModule,
+        MatTreeModule
     ],
     exports: [
         // CdkTableModule,
@@ -141,7 +140,7 @@ import {
         MatTabsModule,
         MatToolbarModule,
         MatTooltipModule,
-        MatTreeModule,
+        MatTreeModule
     ]
 })
-export class MaterialComponentsModule { }
+export class MaterialModule { }

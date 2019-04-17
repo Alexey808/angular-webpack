@@ -5,12 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
-import {
-    MaterialMainModule,
-    MaterialAnimationModule,
-    MaterialComponentsModule
-} from './angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { MaterialModule } from './angular-material.module';
 
 import { TestComponent } from './main/test.component';
 
@@ -25,9 +22,7 @@ import { TestComponent } from './main/test.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        MaterialMainModule,
-        MaterialAnimationModule,
-        MaterialComponentsModule,
+        MaterialModule,
         FlexLayoutModule
     ],
     providers: [],

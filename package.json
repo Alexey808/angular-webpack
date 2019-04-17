@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --progress",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "fix-linters": "tslint -c tslint.json 'src/**/*.ts' --fix",
     "build": "webpack"
   },
   "dependencies": {
