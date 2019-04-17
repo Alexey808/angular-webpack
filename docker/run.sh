@@ -9,4 +9,4 @@ docker run --network host \
 -v ${DIR}/../.:/src \
 -u $(id -u) \
 test \
- /bin/bash -c "npm run dev"
+ /bin/bash -c "npm rebuild node-sass && npm run dev"

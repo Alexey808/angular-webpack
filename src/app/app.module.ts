@@ -11,7 +11,6 @@ import { MaterialModule } from './angular-material.module';
 
 import { TestComponent } from './main/test.component';
 
-// import "@angular/material/prebuilt-themes/indigo-pink.css";
 // import '../assets/styles';
 
 @NgModule({
