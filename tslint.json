@@ -11,6 +11,9 @@
         "directive-selector": [
             true, "attribute", "app", "camelCase"
         ],
+        "indent": [
+            true, "tabs", 2
+        ],
         "max-line-length": {
             "options": [120]
         },

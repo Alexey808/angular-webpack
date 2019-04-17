@@ -9,18 +9,18 @@ import { TestComponent } from './main/test.component';
 // import '../assets/styles';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        TestComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule
-    ],
-    providers: [],
-    bootstrap: [
-        AppComponent
-    ]
+		declarations: [
+				AppComponent,
+				TestComponent
+		],
+		imports: [
+				BrowserModule,
+				AppRoutingModule
+		],
+		providers: [],
+		bootstrap: [
+				AppComponent
+		]
 })
 
 export class AppModule {}
