@@ -9,7 +9,8 @@
     "dev": "webpack-dev-server --inline --hot --progress",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "fix-linters": "tslint -c tslint.json 'src/**/*.ts' --fix",
-    "lint-styles": "stylelint '**/*.scss' --config .stylelintrc --syntax scss --formatter verbose --cache --cache-location './.stylelintcache'",
+    "lint-styles": "stylelint 'src/**/*.scss' --config .stylelintrc --syntax scss --formatter verbose --cache --cache-location './.stylelintcache'",
+    "fix-lint-styles": "stylelint 'src/**/*.scss' --fix",
     "check-packages-versions": "npm-check-updates",
     "test": "jest",
     "build": "webpack"

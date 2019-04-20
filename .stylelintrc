@@ -2,5 +2,20 @@
   "plugins": [
     "stylelint-scss"
   ],
-  "extends": "stylelint-config-recommended-scss"
+  "extends": "stylelint-config-recommended-scss",
+
+  "rules": {
+    "indentation": 2,
+    "string-quotes": "single",
+    "no-duplicate-selectors": true,
+    "color-hex-case": "lower",
+    "selector-combinator-space-after": "always",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-space-before": "never",
+    "declaration-colon-space-after": "always",
+    "function-url-quotes": "always",
+    "font-family-name-quotes": "always-unless-keyword",
+    "rule-empty-line-before": "always-multi-line",
+    "selector-pseudo-element-colon-notation": "double"
+  }
 }
