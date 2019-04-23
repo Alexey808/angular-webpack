@@ -1,5 +1,4 @@
-'use strict';
-
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const helpers = require('./helpers');
@@ -50,8 +49,11 @@ module.exports = {
                     { loader: 'sass-loader', options: { sourceMap: isDev } }
                 ],
                 include: helpers.root('src')
+            },
+            {
+                test: /[\/\\]@angular[\/\\]core[\/\\].+\.js$/,
+                parser: { system: true },
             }
-
         ]
     },
     plugins: [
@@ -59,5 +61,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
+        new webpack.ContextReplacementPlugin(
+          /\@angular(\\|\/)core(\\|\/)fesm5/,
+          helpers.root('./src'),
+          {}
+        )
     ]
 };
