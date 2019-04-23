@@ -23,6 +23,7 @@
         "object-literal-sort-keys": {
             "options": "match-declaration-order"
         },
+        "ordered-imports": false,
         "prefer-readonly": [
             true, "only-inline-lambdas"
         ]

@@ -1,0 +1,22 @@
+@import '~@angular/material/theming';
+@import 'mat-pallete-theme'; // подключаем палитру
+
+
+@include mat-core();
+
+
+// объявляем палитру
+$test-theme-primary: mat-palette($my-primary);
+$test-theme-accept: mat-palette($my-accept);
+$test-theme-warn: mat-palette($mat-red);
+
+// создаём тему
+$test-theme: mat-light-theme(
+  $test-theme-primary,
+  $test-theme-accept,
+  $test-theme-warn
+);
+
+
+// применяем тему
+@include angular-material-theme($test-theme);

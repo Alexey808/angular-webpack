@@ -1,0 +1,13 @@
+@import "../../styles/theme";
+
+h3 {
+  color: #444;
+}
+
+.container-to-flex {
+  border: 1px dashed #999;
+  height: 100px;
+  & div {
+    border: 1px solid #eee;
+  }
+}

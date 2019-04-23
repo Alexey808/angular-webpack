@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { TestComponent } from './main/test.component';
+import { MainComponent } from './main/main.component';
 
 const appRoutes: Routes = [
-		{ path: '', component: TestComponent }
-		// { path: 'test', loadChildren: './modules/test/test.module#MenuModule' }
+	{ path: '', component: MainComponent },
+	{ path: 'index', redirectTo: '/'}
 ];
 
 @NgModule({
-		imports: [
-				RouterModule.forRoot(appRoutes)
-		],
-		exports: [
-				RouterModule
-		]
+	imports: [
+		RouterModule.forRoot(appRoutes)
+	],
+	exports: [
+		RouterModule
+	]
 })
 
 export class AppRoutingModule {}

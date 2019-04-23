@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-		selector: 'app-root',
-		template: `
-        <h2>Hello Angular! Welcome Webpack!</h2>
-        <app-test></app-test>
-    `
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.local.scss']
 })
 export class AppComponent {
 	title = 'App';
