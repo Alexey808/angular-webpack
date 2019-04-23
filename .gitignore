@@ -93,3 +93,8 @@ fabric.properties
 dist
 .idea/
 typings/
+
+#---
+
+# IDE plagin stylelint
+.stylelintcache

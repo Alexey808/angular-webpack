@@ -14,7 +14,18 @@
 4) запустить ./run.sh
 ```
 
----
+
+## Linters в WebpShtorm, Idea
+
+**Подключение линтеров стилей**
+
+Путь до настроек `File/Settings/Languages & Frameworks/Stylesheets/Stylelint`.
+После поставить галочку на единственном чекбоксе.
+
+Подключение stylelint https://www.jetbrains.com/help/webstorm/eslint.html  
+Шаблон конфига https://stylelint.io/user-guide/example-config/  
+Документация https://stylelint.io/user-guide/rules/#stylistic-issues  
+Генератор конфига https://maximgatilin.github.io/stylelint-config/  
 
 **Ссылки**
 
