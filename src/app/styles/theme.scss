@@ -1,31 +1,24 @@
 @import '~@angular/material/theming';
+@import 'mat-pallete-theme'; // подключаем палитру
 
 
 @include mat-core();
 
 
-//Объявление политры темы
-$my-theme-primary: mat-palette($mat-indigo, 700, 300, 900);
-$my-theme-accent: mat-palette($mat-light-blue);
-$my-theme-warn: mat-palette($mat-deep-orange, A200);
-// create theme (use mat-dark-theme for themes with dark backgrounds)
+// объявляем палитру
+$test-theme-primary: mat-palette($my-primary);
+$test-theme-accept: mat-palette($my-accept);
+$test-theme-warn: mat-palette($mat-red);
 
-$my-theme: mat-light-theme(
-  $my-theme-primary,
-  $my-theme-accent,
-  $my-theme-warn
+// создаём тему
+$test-theme: mat-light-theme(
+  $test-theme-primary,
+  $test-theme-accept,
+  $test-theme-warn
 );
 
 
-.my-theme {
-  // use our theme with angular-material-theme mixin
-  @include angular-material-theme($my-theme);
-
-  * {
-    color: green;
-  }
-}
-
-* {
-  color: red;
+// применяем тему
+.test-theme {
+  @include angular-material-theme($test-theme);
 }
