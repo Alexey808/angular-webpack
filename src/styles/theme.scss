@@ -19,6 +19,4 @@ $test-theme: mat-light-theme(
 
 
 // применяем тему
-.test-theme {
-  @include angular-material-theme($test-theme);
-}
+@include angular-material-theme($test-theme);

@@ -1,13 +1,13 @@
-import {AppComponent} from "./app.component";
+import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-    let component: AppComponent;
+	let component: AppComponent;
 
-    beforeEach(() => {
-        component = new AppComponent();
-    });
+	beforeEach(() => {
+		component = new AppComponent();
+	});
 
-    it('should create the app', () => {
-        expect(component.title).toBe('App');
-    });
+	it('should create the app', () => {
+		expect(component.title).toBe('App');
+	});
 });
